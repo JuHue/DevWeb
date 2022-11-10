@@ -4,6 +4,7 @@
     border: 1px solid;
     display: grid;
     grid-template-columns: repeat(2, 48.5%);
+    grid-template-rows: repeat(2, 48.5%);
     grid-gap: 3%;
     background-color: white;
 }
