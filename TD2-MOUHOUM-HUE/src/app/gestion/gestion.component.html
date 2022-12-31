@@ -1,0 +1,36 @@
+<div *ngIf="this.contactData.isFormDataVisible(); else displayFormData" class="container-fluid d-flex align-items-center justify-content-center">
+    <img src="../../assets/gif/nothing-to-see.gif">
+</div>
+<ng-template #displayFormData>
+    <div class="container-fluid justify-content-center show-data">
+       <div class="border rounded boder-2 border-dark mt-3">
+            <ul class="list-group">
+                <li class="list-group-item text-center">
+                    <span  style="float:left;"><h6>firstname: </h6></span>
+                    {{this.contactData.formData.value.firstName}}
+                </li>
+                <li class="list-group-item text-center">
+                    <span  style="float:left;"><h6>lastname: </h6></span>
+                    {{this.contactData.formData.value.lastName}}
+                </li>
+                <li class="list-group-item text-center ">
+                    <span  style="float:left;"><h6>age: </h6></span>
+                    {{this.contactData.formData.value.age}}
+                </li>
+                <li class="list-group-item text-center ">
+                    <span  style="float:left;"><h6>show mail: </h6></span>
+                    {{this.contactData.formData.value.showMail}}
+                </li>
+                <li *ngIf="this.contactData.formData.value.showMail" class="list-group-item">
+                    <span  style="float:left;"><h6>mail: </h6></span>
+                    {{this.contactData.formData.value.mail}}
+                </li>
+                <li class="list-group-item text-center">
+                    <span  style="float:left;"><h6>comment: </h6></span>
+                    {{this.contactData.formData.value.comment}}
+                </li>
+            </ul>
+       </div>
+    </div>
+</ng-template>    
+

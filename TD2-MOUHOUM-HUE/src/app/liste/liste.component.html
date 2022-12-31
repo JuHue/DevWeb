@@ -1,0 +1,12 @@
+<div class="container-fluid d-flex justify-content-center">
+    <ul class="list-unstyled mt-3">
+        <li class="text-center" *ngFor="let film of allFilms; index as i" (click)="showFilmPoster(film)">{{film.getTitle()}}</li>
+    </ul>
+</div>
+<span>
+    <div class="container-fuid d-flex justify-content-center" *ngIf="currentFilmPosterUri !== ''">
+        <div class="wrapper-size">
+            <img src="{{currentFilmPosterUri}}" alt="" class="poster-size">
+        </div>
+    </div>
+</span>
